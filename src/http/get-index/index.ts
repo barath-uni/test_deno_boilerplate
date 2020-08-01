@@ -33,6 +33,13 @@ export async function handler (req: object) {
   }
 }
 
+const getServerResponse = ({response}: {response: any}) => {
+  response.body = {
+      success: true,
+      data: "This is the entire server response"
+  }
+}
+
 // Example responses
 
 /* Forward requester to a new path
